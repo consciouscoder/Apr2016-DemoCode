@@ -1,0 +1,12 @@
+body {
+    background-color: #493;
+}
+
+.big-h1 {
+    font-size: 40px;
+    font-family: fantasy;
+}
+
+h1.big-h1 > strong {
+    font-size: 60px;
+}
