@@ -1,0 +1,37 @@
+body {
+    background-color : #aaa;
+}
+
+.outer {
+    height: 600px;
+    width: 100vw;
+    background-color: dodgerblue;
+    /*text-align: center;*/
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*for centering block level elements*/
+/*.inner {*/
+/*    height: 100px;*/
+/*    width: 100px;*/
+/*    background-color: burlywood;*/
+/*    display: block;*/
+/*    margin: auto;*/
+/*}*/
+
+.inner {
+    height: 100px;
+    width: 100px;
+    background-color:burlywood;
+    display: inline-block;
+    margin: auto;
+    /*we need to set text-align back to initial so that all the children don't inherit it.*/
+    text-align: initial;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+}
