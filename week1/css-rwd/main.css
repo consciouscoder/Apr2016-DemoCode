@@ -1,0 +1,54 @@
+.header-text{
+    font-size: 2rem;
+}
+.main-header{
+    font-size : 44px;
+}
+.box-text{
+    font-size:2em;
+    /*padding : 2em;*/
+}
+html{
+    font-size:30px;
+}
+body{
+    background-color:papayawhip;
+    font-size:100px;
+}
+
+/*Grid*/
+[class *= 'col-']{
+    width:100%;
+    float : left;
+
+    /*wildcard selector for all of our column classes*/
+}
+
+/*@font-face*/
+/*@keyframe*/
+@media(min-width:768px){
+    .col-4-12{
+        width:33.33333333%;
+    }
+    .col-3-12{
+        width:25%;
+    }
+     .col-6-12{
+        width:50%;
+    }
+    body{
+        background-color:lightsteelblue;
+    }
+}
+@media(min-width:1024px){
+    
+    body{
+        background-color:peru;
+    }
+}
+@media(min-width:1200px){
+    
+    body{
+        background-color:cornflowerblue;
+    }
+}

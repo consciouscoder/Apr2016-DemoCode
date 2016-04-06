@@ -1,0 +1,46 @@
+Responsive Web Design
+
+Mobile First Development
+    Designing a site for mobile FIRST
+        - Not worrying about the desktop initially
+        - Often a simpler design
+    
+    As our screen sizes get larger we can add more UI
+        components / features and change the layout
+        - Progressive enhancement
+            Avoid a watered-down mobile experience
+            
+        - vs. Graceful Degradation (desktop first)
+            As screen gets smaller - start ripping
+                things out of the site
+                
+CSS
+    Units
+        px       - least flexible
+        vw / vh  - view width / view height
+        em / rem - refer to the width of the 'm' character
+                    - ems look to the parent container and 
+                        apply a coefficient to the size
+                    - rems look to the font-size on the html tag
+                        (default font size)
+        %        - refer to parent container OR body
+    
+    Media Queries
+        - Applying different styles based on screen size
+        - selectors and rulesets
+
+
+    Specificity
+        How important a style is and whether or not it should
+            override / be overridden by other styles
+        The more specific a selector is, the harder it is
+            to override (cannot override an inline style)
+            
+            
+        Determined by the selector
+                    ID       Classes       Tags
+#myDiv              1          0            0    => 1 0 0
+span.header-text    0          1            1    => 0 1 1
+div span.myText     0          1            2    => 0 1 2
+div span h1 marquee 0          0            4    => 0 0 4
+
