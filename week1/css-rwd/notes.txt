@@ -36,6 +36,9 @@ CSS
         The more specific a selector is, the harder it is
             to override (cannot override an inline style)
             
+        File order matters!  If 2 selectors carry the same
+            specificity, the one LOWER in the file will
+            take precedence
             
         Determined by the selector
                     ID       Classes       Tags
