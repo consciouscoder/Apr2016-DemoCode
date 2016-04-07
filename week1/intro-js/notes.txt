@@ -69,3 +69,20 @@ null
 '' is falsey. all other strings are truthey.
 null and undefined are falsey.
 all other values are truthey.
+
+
+====== Non-Primitive =======
+
+Arrays
+    Arrays are like lists - basically a comma separated list of values
+
+Literal - []
+[1, 2, 3]
+["dog", "cat", "potato"]
+
+Array elements are assigned to indexes
+    Where they are in the array
+
+
+
+
