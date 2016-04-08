@@ -1,0 +1,31 @@
+ /*Adding transition to the transform property so it can be animated */
+ /*backface-visibility makes an element invisible when viewing from the back */
+.front, .back {
+	transition: transform 1s;
+	backface-visibility: hidden;
+}
+
+ /*So the img/text can stack */
+.front {
+	position: absolute;
+}
+
+ /*Want our text to start rotated */
+.back {
+	transform: rotateY(-180deg);
+}
+
+ /*Helps make the animation look less flat */
+.portfolio-item {
+	perspective: 600px;
+}
+
+ /*Selectors - when is it applying these styles and to what element? */
+.portfolio-item:hover .back {
+	transform: rotateY(0deg);
+}
+
+.portfolio-item:hover .front {
+	transform: rotateY(180deg);
+}
+

@@ -84,5 +84,16 @@ Array elements are assigned to indexes
     Where they are in the array
 
 
+Objects
+    Something that describes properties about a thing
+
+Literal - {}
+
+{
+    name : 'Bill',
+    age : 104
+}
 
 
+Objects have named PROPERTIES or KEYS, 
+   not numbered indexes
