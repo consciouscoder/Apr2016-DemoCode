@@ -95,7 +95,7 @@
 
 // Arrays
 //             0           1          2           3            4    
-console.log(days)
+// console.log(days)
 var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 // order
 // type / whats in it
@@ -197,3 +197,68 @@ var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 //     }
 // }
 // console.log('End')
+
+
+// function literal
+var myFunction = function(){}
+
+
+var calculateArea = function(height, width){
+    var area = height * width
+    return area
+}
+
+// to know what the value of calculateArea(10,5) is, we have to know what the return value is.
+var result = calculateArea(10, 5)
+// console.log(result)
+
+
+// this is just a function reference
+// console.log(calculateArea)
+
+
+var anotherReference = calculateArea
+
+// console.log(anotherReference)
+
+var steve = {}
+var janet = {}
+
+steve.doSomething = calculateArea
+janet.alsoDoSomthing = anotherReference
+
+steve.doSomething(1,2)
+calculateArea(1,2)
+
+
+var pluralize = function(word, number){
+    if ( number === 1 ) {
+        return word
+    }
+    else {
+        return word + 's'
+    }
+}
+// console.log(pluralize('mongoose', 11))
+
+
+var hello = 'hello'
+var yelling = hello.toUpperCase()
+// console.log(yelling)
+
+var weekString = 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+
+var weekArray = weekString.split(' ')
+weekArray[2] = weekArray[2].toUpperCase()
+var weekString = weekArray.join(', ')
+// console.log(weekString)
+
+var word2 = 'code'
+var concat = function(word1){
+    var output = word1 + ' ' + word2
+    return output
+}
+
+var result = concat('write')
+
+console.log(result)
