@@ -86,7 +86,6 @@ Array elements are assigned to indexes
 
 Objects
     Something that describes properties about a thing
-
 Literal - {}
 
 {
@@ -94,6 +93,13 @@ Literal - {}
     age : 104
 }
 
-
 Objects have named PROPERTIES or KEYS, 
    not numbered indexes
+    
+
+
+Function -  is a reusable block of code (i.e. a set of instructions) that takes some input, and produces output.
+
+scope - an area in your code where some set of variables is accessible.
+
+ideally, functions should be PURE functions. They take input, produce output, and have no side effects. Pure functions are easier to debug, but sometimes we can't make all of our functions pure.
