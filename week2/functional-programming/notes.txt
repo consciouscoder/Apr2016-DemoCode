@@ -1,0 +1,31 @@
+Functional programming
+    - focusing on more algebraeic concerns and structures
+    - Never CHANGING data, only creating NEW data
+    
+    
+    2 Big Focuses
+        1. Immutability
+            - Don't change your data
+            - Removing STATE from our data
+            - Create NEW data
+            
+            Pure Functions
+                - Focus on Input/Output
+                - Data goes in, NEW data comes out
+                    - Use it(store in a variable) / throw it out
+                - No SIDE EFFECTS
+        
+        2. Composability
+            - Way we structure all the little pieces
+            - Abstracting functionality into smaller legos
+            - Fitting those legos together for more functionality
+            
+            
+
+
+
+
+
+
+
+
