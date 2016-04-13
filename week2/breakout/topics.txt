@@ -1,0 +1,49 @@
+Callback functions
+Events / Event Object (target)
+
+Higher Order Functions
+
+Jquery?
+
+
+REGEX
+
+
+/\w\S*/g
+str.replace(/\w\S*/g, 
+    function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        
+    });
+    
+    
+    
+    Detects email address
+    /.+@.+\.(com|edu)/)
+    
+    
+
+Higher Order Functions
+    - Functions that take other functions as ARGUMENTS
+    - Functions that RETURN other functions
+
+var afterWards = function(stuff){
+    console.log(stuff)
+}
+
+var myOtherFunction = function(things, cb){
+    
+    var newThings = things.method()
+    cb(newThings)
+    
+}
+
+// using the named func
+myOtherFunction('dog', afterWards)
+
+// using the anonymous func
+myOtherFunction('dog', function(stuff){
+    
+    console.log(stuff)
+    
+})
