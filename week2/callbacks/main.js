@@ -31,7 +31,6 @@
 
 
 var fullName = Namer(['Tal', 'Franklin' ,'Box'], nameJoiner)
-console.log(fullName)
 
 
 // Sweet callback
@@ -41,6 +40,9 @@ function Namer (collection, callback){
 function nameJoiner (arg){
     return arg.join(' ')
 }
+
+
+
 
 var myInterval = setInterval(function(){
     console.log('woohoo')

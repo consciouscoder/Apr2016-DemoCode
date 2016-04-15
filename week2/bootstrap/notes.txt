@@ -1,0 +1,52 @@
+Bootstrap
+    - A CSS framework
+    - Pre-defined class selectors with CSS rulesets
+    - Normalizations are baked in
+    
+    - Designed for MOBILE FIRST / Responsive web design
+        (especially the grid system)
+    
+    - Tons of components
+        Typography
+        Layout (grid)
+        Forms
+        Buttons
+        and many more!
+        
+Grid System!
+    
+    12-column layout
+    12/12 columns => 100% width
+    6/12 => 50% width
+    
+    REQUIRED CLASSES
+    1. .container / .container-fluid
+    
+    2. .row
+    
+    3. .col-SCREENSIZE-NUMCOLUMNS
+    
+    .col-xs-* => every screen size unless overridden
+    .col-sm-*
+    .col-md-*
+    .col-lg-*
+    
+    
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-xs-12 col-lg-6"></div>
+            
+        </div>
+    </div>
+        
+        
+        
+        
+        
+
+
+
+
+
