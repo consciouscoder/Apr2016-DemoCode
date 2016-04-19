@@ -35,7 +35,7 @@
         </ul>
 
         <ul>
-            <li ng-repeat="dwarf in arrObjDwarves">
+            <li ng-repeat="dwarf in arrObjDwarves | orderBy:'name'">
                 <h1 ng-click="logDwarf(dwarf)">{{dwarf.name}}</h1>
                 <ul>
                     <li ng-repeat="hobby in dwarf.hobbies">{{hobby}}</li>

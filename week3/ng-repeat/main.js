@@ -1,5 +1,6 @@
 var mainController = function($scope){
     console.log('Hello world!')
+    $scope.theModel = 'stars'
     $scope.dwarves = [
         'sleepy',
         'dopey',
@@ -30,6 +31,7 @@ var mainController = function($scope){
     $scope.logDwarf = function(dwarf){
         console.log('dwarf? ', dwarf)
     }
+
 }
 
 angular.module('app', [])
