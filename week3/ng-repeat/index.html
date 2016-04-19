@@ -10,38 +10,44 @@
     <body ng-controller="mainController">
         <h1>Hello World!</h1>
 
+
         <ul>
-            <li ng-repeat="dwarf in dwarves">{{dwarf}}</li>
+            <li ng-repeat="dwarf in dwarves">{{$index}} --- {{dwarf}}</li>
         </ul>
 
         <ul>
-            <li ng-repeat="(key, val) in dwarvesObj">{{key}} ___ {{val}}</li>
+            <li ng-repeat="(dwarfName, dwarfDescription) in dwarvesObj">{{dwarfName}} --- {{dwarfDescription}}</li>
         </ul>
+       
+        <ul>
+            <li ng-repeat="(dwarfIndex, dwarf) in dwarves">{{dwarfIndex}} --- {{dwarf}}</li>
+        </ul>
+
 
         <ul>
-            <li ng-repeat="(index, dwarf) in dwarves">{{index}}:{{dwarf}}</li>
-        </ul>
-
-        <ul>  
             <li ng-repeat="dwarf in dwarves">
-                <span ng-show="$first">First, there was {{dwarf}}</span>
-                <span ng-show="$middle">Then, there was {{dwarf}}</span>
-                <span ng-show="$last">Lastly, there was {{dwarf}}</span>
+                <span ng-show="$first">First, there was {{dwarf}}.</span>
+                <span ng-show="$middle">Then, there was {{dwarf}}.</span>
+                <span ng-show="$last">Lastly, there was {{dwarf}}.</span>
             </li>
-        </ul>  
-
-        <ul>
-            <li ng-repeat="dwarf in cloneDwarves track by $index">{{dwarf}}</li>
         </ul>
 
         <ul>
-            <li ng-repeat="dwarf in arrObjDwarves | orderBy:'name'">
+            <li ng-repeat="dwarf in cloneDwarves track by $index">{{$index}} --- {{dwarf}}</li>
+        </ul>
+
+<!-- arrObjDwarves.orderBy('name') -->
+<!-- $scope.property = "name" -->
+        <ul>
+            <li ng-repeat="dwarf in arrObjDwarves | orderBy: 'name'">
                 <h1 ng-click="logDwarf(dwarf)">{{dwarf.name}}</h1>
                 <ul>
                     <li ng-repeat="hobby in dwarf.hobbies">{{hobby}}</li>
                 </ul>
+
             </li>
         </ul>
+
         <script src="main.js"></script>
     </body>
 </html>

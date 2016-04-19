@@ -1,37 +1,51 @@
 var mainController = function($scope){
     console.log('Hello world!')
-    $scope.theModel = 'stars'
+
     $scope.dwarves = [
         'sleepy',
         'dopey',
-        'doc'
+        'doc',
+        'bashful',
+        'sneezy',
+        'grumpy',
+        'codey',
+
     ]
+
     $scope.dwarvesObj = {
-        sleepy : 'the one with the floppy hat',
-        dopey : `he's a little slow`,
-        doc   : 'the educated one'
+        'sleepy' : 'the napping one',
+        'dopey' : 'the slow one',
+        'doc' : 'has glasses',
+        'bashful' : 'is shy',
+        'sneezy' : 'has allergies',
+        'grumpy' : 'is related to matt',
+        'codey' : 'loves refactoru',
+        
     }
 
     $scope.cloneDwarves = [
         'sleepy',
         'dopey',
-        'dopey',
         'doc',
-        'dopey',
+        'doc',
+        'bashful',
+        'sneezy',
+        'sneezy',
+        'sneezy',
+        'grumpy',
+        'codey',
+
     ]
 
-    // dont have to worry about track by $index
     $scope.arrObjDwarves = [
-        {name : 'sleepy' , hobbies : ['sleeping', 'not working']},
-        {name : 'dopey'  , hobbies : ['not studying', 'being dumb']},
-        {name : 'doc'    , hobbies : ['reading books', 'trauma surgery']},
-        {name : 'sleepy' , hobbies : ['sleeping', 'not working']},
+        {name : 'sleepy', hobbies : ['sleeping', 'napping']},
+        {name : 'doc', hobbies : ['reading', 'trauma surgery']},
+        {name : 'dopey', hobbies : ['smoking', 'licking walls']},
     ]
-
+    
     $scope.logDwarf = function(dwarf){
-        console.log('dwarf? ', dwarf)
+        console.log(dwarf)
     }
-
 }
 
 angular.module('app', [])

@@ -1,0 +1,13 @@
+templating
+    interpolation 
+        $scope.greeting
+        <h1>{{greeting}}</h1>
+
+        <ul>
+            <li ng-repeat="datum data">{{datum}}</li>
+        </ul>
+
+
+filter: a function that takes input, transforms that input, and returns output without side effects.
+
+filter: a function that takes an array, removes some (or none) of the elements of that array, and returns the new, smaller array.
