@@ -1,0 +1,9 @@
+MOAR ngRepeat
+Modules/Controllers - basic setup
+adding directives to HTML
+
+
+
+
+
+

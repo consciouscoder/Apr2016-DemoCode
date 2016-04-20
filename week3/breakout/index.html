@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="TooMuchPressure">
+    <head>
+        <title>Super Mega App Fun Times</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.4/angular.js"></script>
+    </head>
+    <body ng-controller="pressureControl">
+      <!-- <h1>{{instructors}}</h1> -->
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xs-6 instructor-card" ng-repeat="(instructorIndex, instructor) in instructors">
+            <!-- instructor => instructors[i] -->
+            <div class="row">
+                <div class="col-xs-6 avatar-half">
+                  <img ng-click="fireInstructor($index, $event)" style="width: 100%;height: auto;" src="http://placekitten.com/200/300" alt="" />
+                </div>
+                <div class="col-xs-6 info-half">
+
+                  <div class="row">
+                    <div class="col-xs-12 name">
+                      {{instructor.name}} - {{$index}}
+                    </div>
+                    <div class="col-xs-12 date">
+                      {{instructor.startDate}}
+
+                    </div>
+                    <div class="col-xs-12 credit">
+                      {{instructor.creditCard}}
+
+                    </div>
+                    <div class="col-xs-12 shirt">
+                      {{instructor.shirtSize}}
+
+                    </div>
+                    <div class="col-xs-12 hometown">
+                      {{instructor.homeTown}}
+
+                    </div>
+                    <div class="col-xs-12 heroes">
+                      <ul>
+                        <li ng-repeat="hero in instructor.favoriteHotsHeroes">{{hero}} - {{$index}} - {{instructorIndex}}</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <form ng-submit="addInstructor()">
+        <input placeholder="name" ng-model="newInstructor.name">
+        <input placeholder="startDate" ng-model="newInstructor.startDate">
+        <input placeholder="creditCard" ng-model="newInstructor.creditCard">
+        <input placeholder="shirtSize" ng-model="newInstructor.shirtSize">
+        <input placeholder="homeTown" ng-model="newInstructor.homeTown">
+        <input type="submit">
+      </form>
+
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
