@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="WillyWonka">
+    <head>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.4/angular.js"></script>
+    </head>
+    <body >
+        <div ng-controller="snozBerries as snozCtrl">
+            {{snozCtrl.greeting}}
+            <button ng-click="snozCtrl.clicker()">Click!</button>
+            
+            <ul>
+                <li ng-repeat="candy in snozCtrl.candies">{{candy.name}}</li>
+            </ul>
+            
+        </div>
+        <hr>
+        <div ng-controller="candyControl as candyCtrl">
+            {{candyCtrl.greeting}}
+            <ul>
+                <li ng-repeat="candy in candyCtrl.candies">{{candy.name}}</li>
+            </ul>
+        </div>
+        
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

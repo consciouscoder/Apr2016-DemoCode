@@ -1,0 +1,24 @@
+Factories
+    - Another component in angular
+    - Controllers don't share information
+        - Big thing factories are used for : 
+            * sharing information or methods among controllers
+    
+    - The data or methods you put inside of a factory are totally arbitrary
+    
+    - Lazily instantiated by Angular
+        - Unless a factory is injected somewhere as a dependency, it doesn't exist
+    - Singletons
+        - Created only ONCE
+        - Injecting a factory into multiple locations means each location gets a reference to the SAME object
+
+var myNum = 5
+arr.push(myNum)
+myNum += 1
+
+var me = {name : 'rob'}
+arr.push(me)
+me.name = 'bill'
+
+
+Filters
