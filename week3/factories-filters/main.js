@@ -18,6 +18,7 @@ function snozBerries(wonkaFactory){
     
     // Aliasing the value of this into a variable
     var snozCtrl = this
+    snozCtrl.search = ''
      snozCtrl.greeting = 'Hello'
      snozCtrl.clicker = function(){
          console.log('Click!')
@@ -25,7 +26,14 @@ function snozBerries(wonkaFactory){
     
     console.log('Wonka : ', wonkaFactory)
     snozCtrl.candies = wonkaFactory.candies
+    // arr.filter(function(arrayEl, elIndex, array){
         
+    // })
+    snozCtrl.candyFilter = function(arrayEl, elIndex){
+        console.log('Filter', arrayEl, elIndex)
+        return arrayEl.type.toLowerCase().indexOf(snozCtrl.search.toLowerCase()) > -1
+        
+    }
 }
 function candyControl (wonkaFactory, $timeout){
     var candyCtrl = this // will be the object exposing data to the view
@@ -34,15 +42,15 @@ function candyControl (wonkaFactory, $timeout){
     candyCtrl.candies = wonkaFactory.candies
     // wonkaFactory.myAwesomeUtilityFunction(candies)
     
-    $timeout(function(){
-        candyCtrl.candies.push({
-            name : 'Twizzlers',
-            type : 'Rope',
-            color : 'Red/Black',
-            nuts : false
-        })
-        candyCtrl.candies[0].name = 'Burrito candies'
-    }, 3000)
+    // $timeout(function(){
+    //     candyCtrl.candies.push({
+    //         name : 'Twizzlers',
+    //         type : 'Rope',
+    //         color : 'Red/Black',
+    //         nuts : false
+    //     })
+    //     candyCtrl.candies[0].name = 'Burrito candies'
+    // }, 3000)
     
 }
 
@@ -53,21 +61,24 @@ function wonkaFactory (){
             name : 'Choco Balls',
             type : 'Chocolate',
             color : 'Brown',
-            nuts : false
+            nuts : false,
+            price : 12.65
             
         },
         {
             name : 'Gobstoppers',
             type : 'Hard',
             color : 'Rainbow',
-            nuts : false
+            nuts : false,
+            price : 4.7
             
         },
         {
             name : 'Almond Chocolate Bar',
             type : 'Chocolate',
             color : 'Brown',
-            nuts : true
+            nuts : true,
+            price : 1
             
         }
         

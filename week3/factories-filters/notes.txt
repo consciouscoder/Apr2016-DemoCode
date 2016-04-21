@@ -22,3 +22,11 @@ me.name = 'bill'
 
 
 Filters
+    - Typically used in Angular to format values
+        - date, currency, number
+    - There are a few built in ones that can significantly affect an ngRepeat
+
+    - Filters are normally used inside of angular expressions
+    
+        -{{candy.price | currency}}
+

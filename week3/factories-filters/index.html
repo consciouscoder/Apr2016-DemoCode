@@ -7,9 +7,11 @@
         <div ng-controller="snozBerries as snozCtrl">
             {{snozCtrl.greeting}}
             <button ng-click="snozCtrl.clicker()">Click!</button>
-            
+            <input ng-model="snozCtrl.search">
             <ul>
-                <li ng-repeat="candy in snozCtrl.candies">{{candy.name}}</li>
+                <li ng-repeat="candy in snozCtrl.candies | filter : snozCtrl.candyFilter">
+                    {{candy.name}}
+                </li>
             </ul>
             
         </div>
@@ -17,7 +19,9 @@
         <div ng-controller="candyControl as candyCtrl">
             {{candyCtrl.greeting}}
             <ul>
-                <li ng-repeat="candy in candyCtrl.candies">{{candy.name}}</li>
+                <li ng-repeat="candy in candyCtrl.candies | orderBy : 'name'">
+                    {{candy.price | currency}} - {{candy.name}}
+                </li>
             </ul>
         </div>
         
