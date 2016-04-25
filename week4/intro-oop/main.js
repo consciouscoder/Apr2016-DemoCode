@@ -85,6 +85,7 @@ class Cereal{
         this.sweetness = sweetness
         this.crunchFactor = crunchFactor
         this.mascotName = mascotName
+
     }
     
     makeYouFat(){
