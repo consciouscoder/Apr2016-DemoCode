@@ -1,0 +1,30 @@
+<DOCTYPE>
+<html ng-app='pokeApp'>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Your Page Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body >
+<div  ng-controller="pokeController as pCtrl" >
+  <form ng-submit="pCtrl.searchPokedex()">
+    <input type="text" name="pokeName" ng-model="pCtrl.pokeName">
+    <button type="submit" name="button">Search for a Pokemon</button>
+  </form>
+
+Name:{{ pCtrl.pokemon.name }}
+<br>
+Id: {{pCtrl.pokemon.id}}
+
+<div class="">
+  <ul>
+    <li ng-repeat="poke in pCtrl.pokedex">{{ poke.pokemon_species.name }}</li>
+  </ul>
+</div>
+</div>
+
+</body>
+</html>
