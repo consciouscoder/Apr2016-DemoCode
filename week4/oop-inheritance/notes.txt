@@ -1,0 +1,30 @@
+Inheritance
+
+'is a' Relationships
+'has a' Relationships
+
+Plates 'have some' FoodItems
+Menus 'have some' Plates
+
+Dog 'is a' Mammal
+
+Inheritance is most often used with IS A relationships
+Create the inheritance chain top down (general to specific)
+
+class Mammal{
+    constructor(){
+        this.warmblooded
+        this.hair
+        this.liveBirth
+    }
+}
+
+class Dog(){
+    constructor(){
+        this.warmblooded
+        this.hair
+        this.liveBirth
+    }
+}
+
+ONLY USE INHERITANCE IF IT SAVES YOU CODE
