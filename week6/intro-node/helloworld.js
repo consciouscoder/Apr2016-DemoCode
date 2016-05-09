@@ -7,7 +7,7 @@
 // We need to include the fs module
 // require() => method to pull in other modules into your current file
 
-var fs = require('fs') // Requires the fs module and stores in a variable
+//var fs = require('fs') // Requires the fs module and stores in a variable
 
 // console.log(fs)
 // This is accessing the file system and reading the notes.txt file
@@ -24,3 +24,10 @@ var fs = require('fs') // Requires the fs module and stores in a variable
 // ----- CHALLENGE ----- \\
 // Use a node script that accepts a string as an argument and reverses it
 // EX : 'potato' => 'otatop'
+
+
+// Requiring one of our own modules
+// Helloworld.JS
+// var fedex = require('./fedex.js')
+// console.log(fedex)
+

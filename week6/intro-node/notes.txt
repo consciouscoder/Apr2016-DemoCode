@@ -11,19 +11,10 @@ Differences vs browser
 
     - Based off of a MODULE system since there is no global namespace
 
-<script src="angular.js">
-<script src="angular-route.js">
-angular.module('')
-    .controller('')
-    
+
 Node - REPL
     Read, Evaluate, Print, Loop
     
-Modules - How can we access them?
-    3 Ways
-        1. Including core modules (fs)
-        
-
 
 We can specify arguments to our node files
     we gain access to them in an array at 
@@ -36,3 +27,39 @@ NPM
     Where you pick the modules you want your own application to use
     
     npm is used to install modules and keep them up to date (or out of date if you so choose)
+    
+    Setting up NPM for your project
+        1. npm init -> create a file called package.json
+        2. npm install MODULENAME --save -> installs the module and keeps a record of it in package.json
+        
+    Package.json 
+        -> file that keeps track of WHAT modules you have installed and their VERSION number
+        -> can quickly install all dependencies listed in it by running the command npm install
+            -> reads through package.json and installs all dependencies
+        
+        -> common practice is to git ignore the node_modules folder.  Its huge and the package.json can be used to re-download dependencies
+            -> add a file called .gitignore
+    
+    
+    
+Modules - How can we access them?
+    We use the require method
+    require('MODULENAME')
+    3 Ways
+        1. Including core modules (fs, http)
+        2. By passing in a filepath (our OWN modules/files)
+        3. Including an installed module from npm (request)
+        
+    Require method is how we IMPORT in modules to a file
+    module.exports is how we EXPORT information to other 
+    
+    angular.module('')
+        .factory(function(){
+            
+            return {
+                name : 'Bill'
+            }
+        })
+        
+        
+        
