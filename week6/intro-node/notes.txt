@@ -1,0 +1,38 @@
+Node JS
+
+What?
+    Is a javascript runtime environment
+    Uses the v8 engine, just transplanted into a commandline application
+
+Differences vs browser
+    - no window object / global namespace
+    - no document object
+    - console.logs GO TO THE TERMINAL, NOT THE BROWSER
+
+    - Based off of a MODULE system since there is no global namespace
+
+<script src="angular.js">
+<script src="angular-route.js">
+angular.module('')
+    .controller('')
+    
+Node - REPL
+    Read, Evaluate, Print, Loop
+    
+Modules - How can we access them?
+    3 Ways
+        1. Including core modules (fs)
+        
+
+
+We can specify arguments to our node files
+    we gain access to them in an array at 
+    process.argv
+    arguments vector (argv)
+    
+NPM
+    Service to manage and download node modules
+    NPM is not a Package Manager
+    Where you pick the modules you want your own application to use
+    
+    npm is used to install modules and keep them up to date (or out of date if you so choose)
