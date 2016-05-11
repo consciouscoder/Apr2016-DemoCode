@@ -1,0 +1,10 @@
+What is a web server!?!?!
+
+A web server is basically a set of callback functions that run in response to certain events. instead of events like 'click', or 'hover', we're handling events like "a GET request to /" or " a POST request to /form-submit".  At the end of the callback function, the server must serve a response to the client. 
+
+
+app.get is a function that takes two arguments: the route that we want to handle requests to, and a callback function that determines what to do when we receive requests to that route. 
+
+middleware functions are similar to our route-handler functions. They check the request and run some code, but they DON'T send a response.
+
+express.static middleware basically creates an app.get route for every individual file in your public folder.
