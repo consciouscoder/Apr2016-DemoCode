@@ -1,0 +1,25 @@
+Angular - Factories, Controllers, Routing
+
+Making calls to APIs - Frontend/backend
+
+Express boilerplate
+
+node modules we need to INSTALL
+    express
+    body-parser
+    morgan
+    
+    {
+        name : "Bill",
+        age : 44,
+        favoriteFood : 'cheese pizza'
+    }
+    
+    name=Bill&age=44&favoriteFood=cheese%20pizza
+    
+    "{\"name\" : \"Bill\",\"age\" : 44,\"favoriteFood\" : \"cheese pizza\"}"
+    
+    JSON.parse("")
+    
+    
+http://google.com?search=cheese&page=2
