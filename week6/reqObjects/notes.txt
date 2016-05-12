@@ -1,0 +1,26 @@
+3 major objects contained on the REQ object that you'll probably be concerned with
+
+GET/POST/PUT/DELETE are the most common request types
+
+2 of those objects on the REQ object deal with data stored on different types of requests
+
+    GET  - Query string
+            http://google.com?password=dragons
+         - Lives at  : REQ.query
+    
+    
+    POST - Request Body
+    PUT     http://google.com
+         - Lives at  : REQ.body
+
+
+The third object is independant of request type
+Deals with what is entered into the URL
+
+    URL parameters
+        - defining names of url partials
+    facebook.com/<USERNAME>
+    
+    Parameterized routes are dynamic, we can define areas in a url to accept ANY value
+    
+    Parameters - Lives at  : REQ.params
