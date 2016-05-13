@@ -9,7 +9,6 @@ var
 
 // =======================================
 // SETUP MIDDLEWARE FOR API
-app.set('port', process.env.PORT || 3000)
 app.use(logger('dev'))
 app.use(bodyParser.urlencoded({
   extended: true
@@ -20,9 +19,7 @@ app.use('/api', apiRoutes)
 // =======================================
 app.use(express.static(path.join(__dirname, './public')))
 // =======================================
-// Initialize routes to use
-app.use('/', apiRoutes)
-// =======================================
+
 // SET THE PORT TO RUN
 app.listen(3000, function () {
   console.log('Express server listening on port 3000')
