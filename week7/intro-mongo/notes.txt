@@ -1,0 +1,62 @@
+MongoDB (huMONGOus Database)
+    Container/Storage
+    Stores Information for you
+    Faster than SQL!
+
+SQL vs NoSQL
+
+    SQL
+    SQL DBs are relational databases
+    Data is stored in a flat tabular system
+    Very much like a giant excel spreadsheet
+    Very structured - they require a SCHEMA
+        Schemas are like blueprints, they describe the way the data should look
+    Use a query language to interact with the DB (SQL)
+    Traditionally SQL databases scale VERTICALLY
+        Means that the DB runs on a SINGLE machine that needs to become more powerful
+    
+    NoSQL
+    Schemaless - we don't need to define the way our data looks
+        Often we WANT to, but most NoSQL don't require it
+    Many forms of NoSQL - key/value stores (Redis), JSON-like objects (mongoDB), graph databases
+    Scale HORIZONTALLY - this means we can throw more machines at our databases rather than beefing up one machine
+    No query language, we use APIs to talk to the DB
+    
+    Brew Pacakge Manager
+    http://brew.sh/
+    brew install mongodb
+    
+    sudo mkdir -p /data/db (makes the folder mongodb would like to store your data in)
+    
+    2 Common command line commands
+        1. mongod - starts listening for DB connections (port 27017)
+                  - must ALWAYS be running if you want to connect to your DBs
+                  - c9: mongod --nojournal
+                  - Often needs to be run with sudo
+        2. mongo  - lets you access the mongo shell
+
+    
+    Database       (kittens)              (myStore)
+    Collections    (calico, tabby, etc)   (users, products, orders)
+    Documents      ({name : 'bill'})      ({products : 'kat krunchies'})
+
+
+MongoShell
+    - show dbs      (lists your databases)
+    - use DBNAME    (puts you inside of that database OR creates a DB, VERY IMPORTANT - sets the context for other commands)
+    
+    - show collections (lists your collections within the database you are USING)
+    
+    - db.COLLECTIONNAME.METHOD() (way you will interact with collections in mongodb)
+    
+    
+    1. use kittens
+   C 2. db.calicos.insert({name : "Hairy"})
+   R 3. db.calicos.find({name : "Shoes"})
+   U 4. db.calicos.update(QUERY, DATA, OPTIONS)
+   D 5. db.calicos.remove(QUERY, OPTIONS)
+    
+    db.calicos.update({name : "Hairy"}, {$set : {killedBy : "Car"}})
+    
+MongoDB operators
+    Operators are object Keys that change the behavior of queries or methods
