@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="kanyeApp">
+<head>
+  <meta charset="utf-8">
+  <title>Kanye Rest</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+</head>
+
+<body class="container grey" ng-controller="homeCtrl as hCtrl">
+  <h1>{{ hCtrl.name }}</h1>
+  <h2 class="center"><b>Kanye</b> be the best F*** the <i>REST</i>!</h2>
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="http://static.djbooth.net/pics-features/kanye-tlop-breakdown.jpg">
+        </div>
+        <div class="card-action">
+          <a href="#!" ng-click="hCtrl.getAlbumInfo('the_life_of_pablo')" class="black">The Life of Pablo</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img class="responsive-img"src="http://images.complex.com/complex/image/upload/t_article_image/g6ve3p8v23rqcldck2ov.jpg">
+        </div>
+        <div class="card-action">
+          <a href="#" class="black">Graduation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="js/kanye_factory.js"></script>
+  <script type="text/javascript" src="js/home_controller.js"></script>
+</body>
+
+</html>
