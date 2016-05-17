@@ -1,0 +1,97 @@
+What is REST?!?!
+
+REST makes it easier to find information.
+
+REpresentational State Transfer
+
+a software architecture style for creating scalable web services that make resources available to clients.
+
+REST is NOT a specific tool/technology/language, or a standardized protocol.
+
+in REST, a resource is any piece of information that you can give a name to. e.g. a document, an image, "today's weather in San Francisco", a real, physical person, etc.
+
+resources can be collections, "/api/v2/users", or singletons, "/api/v2/users/{user_ID}"
+
+resources can be queried or modified using different HTTP verbs.
+
+
+
+typically, RESTful APIs return JSON.
+
+
+RESTful APIs are STATELESS
+    server does not keep track of clients between one request and the next
+    client must supply all relevant information that the server needs to respond to the request
+
+
+GET
+    typically used for retrieving information
+    GET requests are SAFE 
+    GET /api/v2/users - get all users
+    GET /api/v2/users/123987
+
+PUT
+    typically used for updating information in the database
+    defined in terms of idempotence - in computer science, an action is considered idempotent if performing that action once has the same effect as performing it any number of times.
+    PUT /api/v2/users/123987 - { name : 'Alice' , Job : 'Developer' }
+
+DELETE
+    typically used for deleting informating from the database
+    delete requests are also idempotent. Sending multiple identical delete requests should not delete multiple resources.
+    DELETE /api/v2/users/123987 
+
+POST
+    typically used for adding data to the database
+    neither safe nor idempotent - every post request performs some action on the server
+    client does not specify the resource ID. the server creates a new resource ID for the newly created resource. 
+    POST /api/v2/users - { name : 'Bob', job : 'QA automation' }
+
+
+RESTful URLs should contain NOUNs, not VERBS.
+    DELETE /api/v2/users/123987 - RESTful
+    POST /api/v2/users/delete/123987 - NOT RESTful
+
+
+A RESTful api should make good use of HTTP response codes.
+
+
+view my current account balance
+GET /api/v1/accounts/raphael
+
+view all my recent transactions
+GET /api/v2/transactions/raphael
+
+view a specific transaction
+GET /api/v7/transactions/raphael/5567 // talbot does a lot of API development
+
+add a new credit card
+POST /api/v7/credit-cards/raphael - {CCnumber : 10, exp : 'yesterday'}
+
+
+change my home address
+PUT /api/v12/users/raphael - {address : '123 fake street'}
+
+
+make a deposit
+POST /api/v1/accounts/raphael - {amt : 'tree fitty', type : 'deposit'}
+{
+    name : raphael,
+    money : 0
+}
+
+Create
+Read
+Update
+Delete
+
+
+dropbox case study
+
+GET /delta
+    was SAFE and idempotent
+    querying /delta was too complex, exceeding limitations of GET
+
+    suggestion: instead of GET, use the HTTP REPORT method
+        REPORT is idempotent AND has a body. Problem? Nobody has ever heard of REPORT. 
+
+    POST was used instead. It's less RESTful, but still easier to understand than report.
