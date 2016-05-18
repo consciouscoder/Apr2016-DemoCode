@@ -4,6 +4,7 @@ var Express = require('express'),
   app = Express(),
   port = process.env.PORT || 8080,
   apiRoutes = require('./api_routes'),
+  path      = require('path'),
   mongoose = require('mongoose')
 // 'mongodb://'+ process.env.IP +'/food'
   mongoose.connect('mongodb://localhost/food', function(err){
@@ -13,6 +14,7 @@ var Express = require('express'),
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(Express.static(path.join(__dirname, './public')))
 
 app.use('/api', apiRoutes)
 
