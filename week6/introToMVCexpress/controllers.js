@@ -16,6 +16,12 @@ module.exports = {
               if(err) console.log("err from db saving: ", err)
               res.json(plate)
           })
+      },
+      update: function(req,res){
+          db.plates.findOneAndUpdate({_id: req.params.id},req.body,{new: true}, function(err, plate){
+              if(err) console.log("err updating plate: ", err)
+              res.json(plate)
+          })
       }
     }//end of my plates controller
 }
